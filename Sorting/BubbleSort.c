@@ -1,3 +1,5 @@
+// Problem: https://www.hackerearth.com/practice/algorithms/sorting/bubble-sort/practice-problems/algorithm/save-patients/
+
 #include <stdio.h>
 
 void bubbleSort(int arr[], int n) {
