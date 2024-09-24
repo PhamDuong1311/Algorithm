@@ -5,12 +5,13 @@
 
 int maxPalindromicSubsequences(char* s) {
     int freq[50] = {0};
+    int i = 0;
+    int palindromes = 0;
     
-    for (int i = 0; s[i] != '\0'; i++) {
+    for (i = 0; s[i] != '\0'; i++) {
         freq[s[i] - 'a']++;
     }
-    int palindromes = 0;
-    for (int i = 0; i < 50; i++) {
+    for (i = 0; i < 50; i++) {
         palindromes += freq[i] / 2; 
     }
     return palindromes;
@@ -18,10 +19,10 @@ int maxPalindromicSubsequences(char* s) {
 
 int main() {
     int t;
+    char s[1001];
     scanf("%d", &t);
     
     while (t--) {
-        char s[1001];
         scanf("%s", s);
         printf("%d\n", maxPalindromicSubsequences(s));
     }
